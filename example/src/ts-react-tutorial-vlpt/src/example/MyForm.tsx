@@ -28,9 +28,13 @@ export default function MyForm({onSubmit} : MyFormProps){
         console.log(e);
         const {name, value} = e.target; // name, value는 Reace.ChangeEvent에서 제공하는 properties
         setForm({
-            
+            /* 
+                ? Why Spread? 
+                    1. 일단 이렇게 해야만 정상적으로 작동하고
+                    2. JS,TS는 메모리에 직접 접근을 할 수 없기 때문에 업데이트 시 기존 객체의 안정성을 보장하기 위해 객체를 spread하고, 데이터를 업데이트 한 이후 덮어쓰는 방식으로 작동한다.
+            */
             ...form,
-            [name]: value   //TODO 왜 name을 감쌈? => 21번째 줄의 name을 가져오기 위해서.
+            [name]: value   //! 왜 name을 감쌈? => 21번째 줄의 name을 가져오기 위해서.
                             //! 얘는 name이 n에 해당한다는 것을 어떻게 알지? 
                             /* 
                                 input 태그의 name attribute와 일치하는 type의 props를 찾아 집어넣음.

@@ -5,6 +5,7 @@ import MyForm from './example/MyForm';
 import CounterUsingReducer from './example/CounterUsingReducer';
 import ReducerSample from './example/example-context/ReducerSample';
 import { SampleProvider } from './example/example-context/SamleContext';
+import CounterApp from './example/example-redux-counter/App' ;
 
 const App:React.FC = () => {
 /* 
@@ -35,10 +36,15 @@ return <CounterUsingReducer/>;
 
  */
 
+/* 
+ ! Reducer with ContextAPI
 return (
   <SampleProvider> 
     <ReducerSample/>
   </SampleProvider>
   );
+ */
+
+  return <CounterApp/>
 }
 export default App;
