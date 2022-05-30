@@ -11,3 +11,4 @@ let {name: r1, age: r2} = destructFunc();
 
 console.log(r1);    // Output: inseok lee === destructFunc의 obj.name;
 console.log(r2);    // Output: 27 === destructFunc의 obj.age;
+

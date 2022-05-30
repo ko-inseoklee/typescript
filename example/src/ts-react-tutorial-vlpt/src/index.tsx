@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { configureStore } from '@reduxjs/toolkit';
+import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import rootReducer from './example/example-redux-counter/modules';
 import CounterApp from './example/example-redux-counter/App';
@@ -19,10 +20,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Provider store={store}>
-      <CounterApp/>
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+      <App />
+        {/* <CounterApp/> */}
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

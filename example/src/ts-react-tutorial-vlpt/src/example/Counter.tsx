@@ -14,5 +14,4 @@ export default function Counter(){
             </div>
         </div>
     )
-    
 }

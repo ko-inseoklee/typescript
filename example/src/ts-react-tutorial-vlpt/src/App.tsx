@@ -6,6 +6,7 @@ import CounterUsingReducer from './example/CounterUsingReducer';
 import ReducerSample from './example/example-context/ReducerSample';
 import { SampleProvider } from './example/example-context/SamleContext';
 import CounterApp from './example/example-redux-counter/App' ;
+import MyRoutes from './Route';
 
 const App:React.FC = () => {
 /* 
@@ -45,6 +46,8 @@ return (
   );
  */
 
-  return <CounterApp/>
+  // return <CounterApp/>
+
+  return (<MyRoutes/>);
 }
 export default App;

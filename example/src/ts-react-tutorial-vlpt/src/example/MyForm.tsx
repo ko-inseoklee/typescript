@@ -30,8 +30,7 @@ export default function MyForm({onSubmit} : MyFormProps){
         setForm({
             /* 
                 ? Why Spread? 
-                    1. 일단 이렇게 해야만 정상적으로 작동하고
-                    2. JS,TS는 메모리에 직접 접근을 할 수 없기 때문에 업데이트 시 기존 객체의 안정성을 보장하기 위해 객체를 spread하고, 데이터를 업데이트 한 이후 덮어쓰는 방식으로 작동한다.
+                    Spread하지 않으면 form객체 자체로 인식, spread했을 때 객체 내의 property와  e.target에서 들어온 name을 비교할 수 있음.
             */
             ...form,
             [name]: value   //! 왜 name을 감쌈? => 21번째 줄의 name을 가져오기 위해서.
