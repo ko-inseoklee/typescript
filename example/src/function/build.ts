@@ -7,15 +7,28 @@ function b(path){
     };
 };
 
+function t(path: number) : number;
+function t(path: string) : string;
+
+function t(path : any) {
+    return path;
+}
+
 function r({path}){
-    return{
+    return {
         path,
         build:b(path)
     };
 }
 
+
 let test1 = r({path: true});
 let test2 = r({path: false});
+
+console.log(b(123)({param: 1}));
+
+Func2(123)({param:123})(123);
+
 
 let test1Build = test1.build({});
 let test2Build = test2.build({});
